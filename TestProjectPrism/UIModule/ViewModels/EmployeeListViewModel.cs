@@ -1,8 +1,8 @@
-﻿using DatabaseManager.Contexts;
-using DatabaseManager.Entity;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using System.Collections.Generic;
 using System.Linq;
+using TestProjectPrism.DatabaseManager.Contexts;
+using TestProjectPrism.DatabaseManager.Entity;
 
 namespace TestProjectPrism.UIModule.ViewModels
 {

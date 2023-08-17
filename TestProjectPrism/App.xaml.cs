@@ -1,10 +1,10 @@
-﻿using DatabaseManager.Contexts;
-using DryIoc;
+﻿using DryIoc;
 using Microsoft.EntityFrameworkCore;
 using Prism.DryIoc;
 using Prism.Ioc;
 using Prism.Modularity;
 using System.Windows;
+using TestProjectPrism.DatabaseManager.Contexts;
 using TestProjectPrism.ShellModule.Views;
 
 namespace TestProjectPrism
