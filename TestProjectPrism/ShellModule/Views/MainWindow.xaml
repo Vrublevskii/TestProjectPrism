@@ -12,6 +12,6 @@
         
         
         <ContentControl prism:RegionManager.RegionName="ContentRegion" Grid.Row="0"/>
-        <ContentControl prism:RegionManager.RegionName="ControlRegion" Grid.Row="1"/>
+        <ContentControl prism:RegionManager.RegionName="ControlsRegion" Grid.Row="1"/>
     </Grid>
 </Window>
