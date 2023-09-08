@@ -25,7 +25,7 @@ public class AddEditEmployeeViewModel : BindableBase, IDialogAware
         get => _title;
         set => SetProperty(ref _title, value);
     }
-
+    
     public Employee Employee
     {
         get => _employee;
@@ -70,7 +70,6 @@ public class AddEditEmployeeViewModel : BindableBase, IDialogAware
     }
 
     public ICommand CloseCommand => _closeCommand ??= new DelegateCommand<string>(CloseDialog);
-
 
     protected virtual void CloseDialog(string parameter)
     {
