@@ -29,7 +29,5 @@ namespace TestProjectPrism
             moduleCatalog.AddModule(typeof(UIModule.UIModule));
             moduleCatalog.AddModule(typeof(DialogModule.DialogModule));
         }
-
-
     }
 }
