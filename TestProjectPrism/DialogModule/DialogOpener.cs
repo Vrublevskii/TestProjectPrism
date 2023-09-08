@@ -14,7 +14,7 @@ namespace TestProjectPrism.DialogModule
             var parameters = new DialogParameters
             {
                 {"title", "Добавить сотрудника" },
-                {"employee", EntityFactory.GetEmptyEmployee() },
+                {"employee", new Employee() },
                 {"okButtonContent", "Добавить" }
             };
             dialogService.ShowDialog("AddEditEmployee", parameters, callBack);

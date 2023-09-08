@@ -79,7 +79,7 @@ namespace TestProjectPrism.UIModule.ViewModels
                 if (r.Result == ButtonResult.OK)
                 {
                     var employee = r.Parameters.GetValue<Employee>("employee");
-                    await CRUDRepository.CreateEmployeeWithNewDependencies(_employeeContext, employee);
+                    await CRUDRepository.CreateEmployee(_employeeContext, employee);
                     await LoadData();//не работает?
                 }
             });
