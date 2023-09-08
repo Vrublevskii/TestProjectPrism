@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace TestProjectPrism.ShellModule.Views
+namespace TestProjectPrism.Views
 {
     public partial class MainWindow : Window
     {

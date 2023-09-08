@@ -1,11 +1,11 @@
 ﻿using DryIoc;
-using Microsoft.EntityFrameworkCore;
 using Prism.DryIoc;
 using Prism.Ioc;
 using Prism.Modularity;
 using System.Windows;
 using TestProjectPrism.DatabaseManager.Contexts;
-using TestProjectPrism.ShellModule.Views;
+using TestProjectPrism.Utils;
+using TestProjectPrism.Views;
 
 namespace TestProjectPrism
 {
@@ -18,18 +18,18 @@ namespace TestProjectPrism
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            var builder = new DbContextOptionsBuilder<UserContext>();
-            builder.UseSqlite("Filename=textdb.db");
-            containerRegistry.RegisterInstance(builder.Options);
-            containerRegistry.Register<UserContext>();
+            containerRegistry.RegisterContext<EmployeeContext>("EmployeeDB.db");
 
             var container = containerRegistry.GetContainer();
-            using var context = container.Resolve<UserContext>();
+            using var context = container.Resolve<EmployeeContext>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule(typeof(UIModule.UIModule));
+            moduleCatalog.AddModule(typeof(DialogModule.DialogModule));
         }
+
+
     }
 }

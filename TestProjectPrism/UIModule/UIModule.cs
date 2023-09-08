@@ -10,7 +10,6 @@ namespace TestProjectPrism.UIModule
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var regionManager = containerProvider.Resolve<IRegionManager>();
-            regionManager.RegisterViewWithRegion("ContentRegion", typeof(EmployeeList));
             regionManager.RegisterViewWithRegion("ControlsRegion", typeof(Controls));
         }
 
