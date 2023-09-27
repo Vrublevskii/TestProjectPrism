@@ -1,16 +1,23 @@
-﻿using TestProjectPrism.DatabaseManager.Entity;
+﻿using System;
+using TestProjectPrism.DatabaseManager.Entity;
 
 namespace TestProjectPrism.DatabaseManager
 {
     public static class EntityFactory
     {
-        public static Employee GetEmptyEmployee()
+        public static DbEntity GetEmptyEntity(Type entityType)
         {
-            return new Employee()
+            if (entityType == typeof(Employee))
             {
-                Department = new Department(),
-                Position = new Position()
-            };
+                return new Employee()
+                {
+                    Department = new Department(),
+                    Position = new Position()
+                };
+            }
+            else if (entityType == typeof(Department)) return new Department() { };
+            else if (entityType == typeof(Position)) return new Position() { };
+            else throw new NotImplementedException();
         }
     }
 }

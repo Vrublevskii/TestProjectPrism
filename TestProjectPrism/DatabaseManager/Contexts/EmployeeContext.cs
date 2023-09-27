@@ -5,7 +5,7 @@ namespace TestProjectPrism.DatabaseManager.Contexts
 {
     public class EmployeeContext : DbContext
     {
-        public DbSet<Employee> Employees => Set<Employee>();
+        public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Position> Positions { get; set; }
 

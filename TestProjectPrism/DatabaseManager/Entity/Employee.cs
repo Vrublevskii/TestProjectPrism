@@ -1,8 +1,8 @@
-﻿using System;
+﻿using TestProjectPrism.DatabaseManager.Managers.EntityManager;
 
 namespace TestProjectPrism.DatabaseManager.Entity
 {
-    public partial class Employee
+    public partial class Employee : DbEntity
     {
         public int Id { get; set; }
 
@@ -25,5 +25,7 @@ namespace TestProjectPrism.DatabaseManager.Entity
         public Department Department { get; set; } = null!;
 
         public Position Position { get; set; } = null!;
+
+        public override IDbEntityManager GetManager() => EmployeeManager.GetInstance();
     }
 }

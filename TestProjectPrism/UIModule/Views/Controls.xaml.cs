@@ -2,14 +2,16 @@
 
 namespace TestProjectPrism.UIModule.Views
 {
-    /// <summary>
-    /// Interaction logic for Controls
-    /// </summary>
     public partial class Controls : UserControl
     {
         public Controls()
         {
             InitializeComponent();
+        }
+
+        private void SearchString_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+
         }
     }
 }

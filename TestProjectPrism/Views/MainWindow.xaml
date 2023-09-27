@@ -6,8 +6,10 @@
         Title="{Binding Title}" Height="350" Width="1000" >
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <ContentControl prism:RegionManager.RegionName="ResultRegion" Grid.Row="0"/>
         <ContentControl prism:RegionManager.RegionName="ControlsRegion" Grid.Row="1"/>
     </Grid>
 </Window>
